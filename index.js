@@ -29,12 +29,8 @@ client.on('messageCreate', (message)=>{
         message.reply("hello there, my name is lewis bot");
        break;
 
-       case 'vc':
-        message.reply("depcrated bozo");
-       break;
-
        case 'phenomenal':
-           message.channel.send("Simnply henomoenal");
+           message.channel.send("https://images-ext-1.discordapp.net/external/3vmR8-kJ9gxhZyOvawWbmXI-bjDcyndDfUypO8M5zq0/%3Fcid%3D73b8f7b17a7a38d0bcba25968bf34c6aea79b0b48c8da81e%26rid%3Dgiphy.mp4%26ct%3Dg/https/media3.giphy.com/media/gsGLcR9UxAsebfQBd8/giphy.mp4");
         break;
         
         case 'happy':
