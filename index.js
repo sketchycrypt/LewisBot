@@ -2,7 +2,6 @@ const { Client, Intents } = require('discord.js');
 const voiceDiscord = require('@discordjs/voice');
 const dotenv = require('dotenv');
 const express = require('express');
-const wakeUpDyno = require("wokeDyno.js")
 var fs = require('fs');
 var files = fs.readdirSync('./audio')
 
@@ -69,13 +68,5 @@ client.on("voiceStateUpdate", (oldState, newState) => {
     }
 });
 
-const PORT = 3000; // whatever port you like
-const DYNO_URL = "https://lewis-bot69.herokuapp.com/"; // the url of your dyno
-
-const app = express(); // instantiate Express app
-
-app.listen(PORT, () => {
-    wakeUpDyno(DYNO_URL); // will start once server starts
-})
 
 client.login(process.env.TOKEN)
