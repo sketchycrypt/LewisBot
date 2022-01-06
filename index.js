@@ -59,6 +59,10 @@ client.on("ready", () => {
   })();
 });
 
+client.on("messageCreate", async (message) => {
+  console.log(`${message.author.username} : ${message.content}`);
+});
+
 client.on("interactionCreate", async (interaction) => {
   if (!interaction.isCommand()) return;
 
