@@ -57,6 +57,13 @@ client.on("ready", () => {
       if (err) console.error(err);
     }
   })();
+
+  client.user.setActivity('over Emily', { type: "WATCHING" });
+
+});
+
+client.on("messageCreate", async (message) => {
+  console.log(`${message.author.username} : ${message.content}`);
 });
 
 client.on("interactionCreate", async (interaction) => {
