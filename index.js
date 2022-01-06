@@ -58,7 +58,7 @@ client.on("ready", () => {
     }
   })();
 
-  client.user.setActivity('Emily', { type: "WATCHING" });
+  client.user.setActivity('over Emily', { type: "WATCHING" });
 
 });
 
