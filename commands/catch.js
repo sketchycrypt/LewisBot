@@ -2,7 +2,7 @@ const { SlashCommandBuilder } = require("@discordjs/builders");
 const { MessageActionRow, MessageButton, MessageEmbed } = require('discord.js');
 
 module.exports = {
-  data: new SlashCommandBuilder().setName("poll").setDescription("PoopSex"),
+  data: new SlashCommandBuilder().setName("catch").setDescription("Who are you gonna catch?"),
   async execute(interaction) {
       const row = new MessageActionRow()
       .addComponents(
