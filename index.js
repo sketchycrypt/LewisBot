@@ -57,6 +57,9 @@ client.on("ready", () => {
       if (err) console.error(err);
     }
   })();
+
+  client.user.setActivity('Emily', { type: "WATCHING" });
+
 });
 
 client.on("messageCreate", async (message) => {
