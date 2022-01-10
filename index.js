@@ -120,7 +120,7 @@ client.on('interactionCreate', interaction => {
     interaction.reply(interaction.user.username + " has caught a **Rare** Emily!")
   }else if(chance > 5){
     try{
-      interaction.reply("The poor bastard, " + interaction.user.nickname + " didnt catch Emily, he has been timed out for 60 seconds");
+      interaction.reply("The poor bastard, " + interaction.user.username + " didnt catch Emily, he has been timed out for 60 seconds");
       interaction.member.disableCommunicationUntil(Date.now() + (1 * 60 * 1000), 'Didnt catch emily');
     }catch {
       console.log(error);
