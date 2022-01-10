@@ -2,14 +2,18 @@ const { SlashCommandBuilder } = require("@discordjs/builders");
 const { MessageActionRow, MessageButton, MessageEmbed } = require('discord.js');
 
 module.exports = {
-  data: new SlashCommandBuilder().setName("catch").setDescription("Who are you gonna catch?"),
+
+  data: new SlashCommandBuilder().setName("catch").setDescription("Emily! Come here Emily!"),
+
   async execute(interaction) {
+      const button1 = new MessageButton()
+          .setStyle('PRIMARY')
+          .setLabel('Catch!')
+          .setCustomId('primary')
+
       const row = new MessageActionRow()
       .addComponents(
-        new MessageButton()
-        .setCustomId('primary')
-        .setLabel('Click')
-        .setStyle('PRIMARY'),
+        button1
       );
 
         const embed = new MessageEmbed()
