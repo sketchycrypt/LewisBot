@@ -6,6 +6,7 @@ const extra = require("./data.json");
 const { REST } = require("@discordjs/rest");
 const { Routes } = require("discord-api-types/v9");
 var fs = require("fs");
+const { TIMEOUT } = require("dns");
 var GUILD_ID = "921765232517480528";
 var files = fs.readdirSync("./audio");
 
@@ -118,10 +119,12 @@ client.on('interactionCreate', interaction => {
   if(chance < 5){
     interaction.reply(interaction.user.username + " has caught a **Rare** Emily!")
   }else if(chance > 5){
-    interaction.reply("The poor bastard, " + interaction.user.username + " didnt catch Emily, he has been timed out for 60 seconds");
-    // interaction.user.timeout(60 * 1000, 'Didnt catch Emily')
-    // .then(console.log("OWNED A BOZO HAHAHA"))
-    // .catch(console.error);
+    try{
+      interaction.reply("The poor bastard, " + interaction.user.nickname + " didnt catch Emily, he has been timed out for 60 seconds");
+      interaction.member.disableCommunicationUntil(Date.now() + (1 * 60 * 1000), 'Didnt catch emily');
+    }catch {
+      console.log(error);
+    }
   }
 });
 
