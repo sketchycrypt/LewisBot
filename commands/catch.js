@@ -2,7 +2,9 @@ const { SlashCommandBuilder } = require("@discordjs/builders");
 const { MessageActionRow, MessageButton, MessageEmbed } = require('discord.js');
 
 module.exports = {
+
   data: new SlashCommandBuilder().setName("catch").setDescription("Emily! Come here Emily!"),
+
   async execute(interaction) {
       const button1 = new MessageButton()
           .setStyle('PRIMARY')
