@@ -114,10 +114,10 @@ client.on("voiceStateUpdate", (oldState, newState) => {
 
 client.on('interactionCreate', interaction => {
 	if (!interaction.isButton()) return;
-  let chance = Math.random() <= 0.5;
-  if(chance < 0.5){
-    interaction.reply("You have caught a **Rare** Emily!")
-  }else if(chance > 0.5){
+  let chance = Math.random() * 100;
+  if(chance < 5){
+    interaction.reply(interaction.user.username + " has caught a **Rare** Emily!")
+  }else if(chance > 5){
     interaction.reply("The poor bastard, " + interaction.user.username + " didnt catch Emily, he has been timed out for 60 seconds");
     // interaction.user.timeout(60 * 1000, 'Didnt catch Emily')
     // .then(console.log("OWNED A BOZO HAHAHA"))
