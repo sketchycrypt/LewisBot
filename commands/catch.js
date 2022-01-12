@@ -18,7 +18,7 @@ module.exports = {
 
         const embed = new MessageEmbed()
             .setColor('#0099ff')
-            .setTitle('You have just caught a rare Emily!')
+            .setTitle('You have just found a rare Emily!')
             .setDescription('If you dont catch Emily here... you are donzo')
 
     interaction.reply({ embeds: [embed], components: [row]})
